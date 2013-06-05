@@ -45,8 +45,8 @@ public class SubCalc extends CalcData {
 
     public void aNet() {
 
-        hostBits = (int) Math.pow(2, (maskCalculate(mOct2)
-                + maskCalculate(mOct3) + maskCalculate(mOct4))) - 2;
+        hostBits = (int) Math.pow(2, (maskCalculateHostBits(mOct2)
+                + maskCalculateHostBits(mOct3) + maskCalculateHostBits(mOct4))) - 2;
 
         System.out.println("a net");
 
@@ -86,7 +86,7 @@ public class SubCalc extends CalcData {
 
     public void bNet() {
 
-        hostBits = (int) Math.pow(2, (maskCalculate(mOct3) + maskCalculate(mOct4))) - 2;
+        hostBits = (int) Math.pow(2, (maskCalculateHostBits(mOct3) + maskCalculateHostBits(mOct4))) - 2;
 
         System.out.println("b net");
 
@@ -118,7 +118,7 @@ public class SubCalc extends CalcData {
 
     public void cNet() {
 
-        hostBits = (int) Math.pow(2, maskCalculate(mOct4)) - 2;
+        hostBits = (int) Math.pow(2, maskCalculateHostBits(mOct4)) - 2;
 
         System.out.println("c net");
 
