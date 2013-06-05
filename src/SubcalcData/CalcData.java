@@ -34,26 +34,29 @@ public class CalcData {
         }
     }
 
-    public int maskCalculate(int mask) {
+    public int maskCalculateHostBits(int mask) {
         System.out.println("mask calculate");
-        if (mask == 0) {
-            return 8;
-        } else if (mask == 128) {
-            return 7;
-        } else if (mask == 192) {
-            return 6;
-        } else if (mask == 224) {
-            return 5;
-        } else if (mask == 240) {
-            return 4;
-        } else if (mask == 248) {
-            return 3;
-        } else if (mask == 252) {
-            return 2;
-        } else if (mask == 254) {
-            return 1;
-        } else {
-            return 0;
+        switch (mask) {
+            case 0:
+                return 8;
+            case 128:
+                return 7;
+            case 192:
+                return 6;
+            case 224:
+                return 5;
+            case 240:
+                return 4;
+            case 248:
+                return 3;
+            case 252:
+                return 2;
+            case 254:
+                return 1;
+            case 255:
+                return 0;
+            default:
+                return 255;
         }
     }
 
